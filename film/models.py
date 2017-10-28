@@ -92,3 +92,20 @@ class Language(models.Model):
 
     class Meta:
         db_table = 'language'
+
+# CREATE TABLE IF NOT EXISTS "country" (
+#   "country_id" smallint PRIMARY KEY NOT NULL,
+#   "country" varchar(50) NOT NULL,
+#   "last_update" timestamp
+# );
+
+class Country(models.Model):
+    country_id = models.AutoField(primary_key=True)
+    country = models.CharField(max_length=30)
+    last_updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'Country'
+
+    def __str__(self):
+        return u'%s' % self.country
