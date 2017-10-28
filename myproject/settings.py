@@ -26,6 +26,9 @@ INSTALLED_APPS = [
 
     'accounts',
     'boards',
+    'film',
+                  
+                  
 ]
 
 MIDDLEWARE = [
